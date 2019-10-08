@@ -333,6 +333,14 @@ before-after-hook@^2.0.0:
   resolved "https://registry.yarnpkg.com/before-after-hook/-/before-after-hook-2.1.0.tgz#b6c03487f44e24200dd30ca5e6a1979c5d2fb635"
   integrity sha512-IWIbu7pMqyw3EAJHzzHbWa85b6oud/yfKYg5rqB5hNE8CeMi3nX+2C2sj0HswfblST86hpVEOAb9x34NZd6P7A==
 
+better-sqlite3@^5.4.3:
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/better-sqlite3/-/better-sqlite3-5.4.3.tgz#2cb843ce14c56de9e9c0ca6b89844b7d4b5794b8"
+  integrity sha512-fPp+8f363qQIhuhLyjI4bu657J/FfMtgiiHKfaTsj3RWDkHlWC1yT7c6kHZDnBxzQVoAINuzg553qKmZ4F1rEw==
+  dependencies:
+    integer "^2.1.0"
+    tar "^4.4.10"
+
 bignumber.js@^7.0.0:
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-7.2.1.tgz#80c048759d826800807c4bfd521e50edbba57a5f"
@@ -1502,7 +1510,7 @@ got@9.6.0, got@^9.6.0:
     to-readable-stream "^1.0.0"
     url-parse-lax "^3.0.0"
 
-graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3:
+graceful-fs@^4.1.11, graceful-fs@^4.1.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.2.tgz#6f0952605d0140c1cfdb138ed005775b92d67b02"
   integrity sha512-IItsdsea19BoLC7ELy13q1iJFNmd7ofZH5+X/pJr90/nRoPEX0DJo1dHDbgtYWOhJhcCgMDTOw84RZ72q6lB+Q==
@@ -1735,6 +1743,11 @@ inquirer@^6.4.1:
     string-width "^2.1.0"
     strip-ansi "^5.1.0"
     through "^2.3.6"
+
+integer@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/integer/-/integer-2.1.0.tgz#29134ea2f7ba3362ed4dbe6bcca992b1f18ff276"
+  integrity sha512-vBtiSgrEiNocWvvZX1RVfeOKa2mCHLZQ2p9nkQkQZ/BvEiY+6CcUz0eyjvIiewjJoeNidzg2I+tpPJvpyspL1w==
 
 interpret@^1.0.0:
   version "1.2.0"
@@ -2126,7 +2139,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@4, lodash@4.17.15, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15:
+lodash@4.17.15, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -2137,17 +2150,6 @@ log-symbols@^2.2.0:
   integrity sha512-VeIAFslyIerEJLXHziedo2basKbMKtTw3vfn5IzG0XTjhAVEJyNHnL2p7vc+wBDSdQuUpNw3M2u6xb9QsAY5Eg==
   dependencies:
     chalk "^2.0.1"
-
-lowdb@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/lowdb/-/lowdb-1.0.0.tgz#5243be6b22786ccce30e50c9a33eac36b20c8064"
-  integrity sha512-2+x8esE/Wb9SQ1F9IHaYWfsC9FIecLOPrK4g17FGEayjUWH172H6nwicRovGvSE2CPZouc2MCIqCI7h9d+GftQ==
-  dependencies:
-    graceful-fs "^4.1.3"
-    is-promise "^2.1.0"
-    lodash "4"
-    pify "^3.0.0"
-    steno "^0.4.1"
 
 lowercase-keys@^1.0.0, lowercase-keys@^1.0.1:
   version "1.0.1"
@@ -3225,13 +3227,6 @@ sshpk@^1.7.0:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
-steno@^0.4.1:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/steno/-/steno-0.4.4.tgz#071105bdfc286e6615c0403c27e9d7b5dcb855cb"
-  integrity sha1-BxEFvfwobmYVwEA8J+nXtdy4Vcs=
-  dependencies:
-    graceful-fs "^4.1.3"
-
 string-width@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-1.0.2.tgz#118bdf5b8cdc51a2a7e70d211e07e2b0b9b107d3"
@@ -3355,7 +3350,7 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tar@^4:
+tar@^4, tar@^4.4.10:
   version "4.4.13"
   resolved "https://registry.yarnpkg.com/tar/-/tar-4.4.13.tgz#43b364bc52888d555298637b10d60790254ab525"
   integrity sha512-w2VwSrBoHa5BsSyH+KxEqeQBAllHhccyMFVHtGtdMpF4W7IRWfZjFiQceJPChOeTsSDVUpER2T8FA93pr0L+QA==
