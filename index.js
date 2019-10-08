@@ -20,13 +20,13 @@ const app = express();
 app.use(require('body-parser').json());
 app.use(require('body-parser').urlencoded({ extended: true }));
 
-app.get('/', async (req, res, next) => {
+app.get('/', (req, res, next) => {
   try {
     const info = sysinfo();
     const rendered = render({
       title: 'Clownfish',
       subtitle: 'by IMA World Health',
-      log: await logger.read(10),
+      log: logger.read(10),
       info,
     });
 

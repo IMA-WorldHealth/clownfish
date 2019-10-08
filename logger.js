@@ -9,6 +9,22 @@ dayjs.extend(require('dayjs/plugin/relativeTime'));
 class Logger {
   constructor(name) {
     this.db = new Database(name || './database.db');
+
+    const createLoggerTableQuery = `
+      CREATE TABLE IF NOT EXISTS logger (
+        googleDriveParentFolderId INTEGER,
+        normalizedStructure TEXT,
+        normalizedReportName TEXT,
+        attachments TEXT,
+        start TEXT,
+        sender TEXT,
+        end TEXT,
+        elapsed TEXT
+      )`;
+
+    this.db
+      .prepare(createLoggerTableQuery)
+      .run();
   }
 
   write(params) {
@@ -26,22 +42,6 @@ class Logger {
       elapsed,
     };
 
-    const createLoggerTableQuery = `
-      CREATE TABLE IF NOT EXISTS logger (
-        googleDriveParentFolderId INTEGER,
-        normalizedStructure TEXT,
-        normalizedReportName TEXT,
-        attachments TEXT,
-        start TEXT,
-        sender TEXT,
-        end TEXT,
-        elapsed TEXT
-      )`;
-
-    this.db
-      .prepare(createLoggerTableQuery)
-      .run();
-
     const insertIntoLoggerQuery = `
       INSERT INTO logger (googleDriveParentFolderId, normalizedStructure, normalizedReportName, attachments, start, sender, end, elapsed)
       VALUES ($googleDriveParentFolderId, $normalizedStructure, $normalizedReportName, $attachments, $start, $sender, $end, $elapsed)
@@ -53,24 +53,18 @@ class Logger {
   }
 
   read(n) {
-    return new Promise((resolve, reject) => {
-      try {
-        const limit = n ? ` LIMIT ${n}` : '';
-        const query = `
-          SELECT
-            googleDriveParentFolderId, normalizedStructure, normalizedReportName, attachments, start, sender, end, elapsed
-          FROM logger ORDER BY start DESC ${limit}
-          `;
-        const rows = this.db.prepare(query).all();
-        rows.forEach((row) => {
-          // eslint-disable-next-line no-param-reassign
-          row.attachments = row.attachments ? JSON.parse(row.attachments) : [];
-        });
-        return resolve(rows);
-      } catch (error) {
-        return reject(error);
-      }
+    const limit = n ? ` LIMIT ${n}` : '';
+    const query = `
+      SELECT
+        googleDriveParentFolderId, normalizedStructure, normalizedReportName, attachments, start, sender, end, elapsed
+      FROM logger ORDER BY start DESC ${limit}
+      `;
+    const rows = this.db.prepare(query).all();
+    rows.forEach((row) => {
+      // eslint-disable-next-line no-param-reassign
+      row.attachments = row.attachments ? JSON.parse(row.attachments) : [];
     });
+    return rows;
   }
 }
 
