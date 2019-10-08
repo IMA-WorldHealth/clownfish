@@ -1,4 +1,6 @@
+
 require('dotenv').config();
+
 
 const {
   PORT,
@@ -8,6 +10,7 @@ const debug = require('debug')('clownfish');
 const express = require('express');
 const fs = require('fs');
 const template = require('lodash.template');
+const email = require('./email');
 
 const api = require('./api');
 const utils = require('./utils');
@@ -81,7 +84,7 @@ app.post('/:googleDriveParentFolderId/receive', async (req, res, next) => {
       sender: mail.from,
       end: new Date(),
     });
-
+    email.send({ from: mail.to, to: mail.from });
     res.sendStatus(200);
   } catch (e) {
     debug('An error occurred: %o', e);

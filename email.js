@@ -1,5 +1,6 @@
 const axios = require('axios');
 const debug = require('debug')('clownfish:email');
+const mailgun = require('mailgun-js');
 const fileType = require('file-type');
 
 const { Duplex } = require('stream');
@@ -29,4 +30,23 @@ async function downloadAttachment(attachment) {
   };
 }
 
+
+async function sendMail(param) {
+  const apiKey = process.env.MAILGUN_API_KEY;
+  const domain = process.env.MAILGUN_DOMAIN;
+  const mailgunInit = mailgun({ apiKey, domain });
+
+  const data = {
+    from: `No_reply <${param.from}>`,
+    to: param.to,
+    subject: param.subject || 'Notification',
+    text: param.txt || 'Votre message a été archivé avec succès!',
+  };
+
+  return mailgunInit.messages().send(data, (error, body) => {
+    debug(`Email notification : ${body}`);
+  });
+}
+
 exports.downloadAttachment = downloadAttachment;
+exports.send = sendMail;
