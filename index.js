@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 
 
@@ -74,6 +73,9 @@ app.post('/:googleDriveParentFolderId/receive', async (req, res, next) => {
 
     debug(`Finished processing ${attachments.length} attachments`);
 
+    const sender = mail.From;
+    const recipient = mail.To;
+
     // write to log
     logger.write({
       googleDriveParentFolderId,
@@ -81,10 +83,11 @@ app.post('/:googleDriveParentFolderId/receive', async (req, res, next) => {
       normalizedReportName,
       attachments,
       start,
-      sender: mail.from,
+      sender,
       end: new Date(),
     });
-    email.send({ from: mail.to, to: mail.from });
+
+    email.send({ from: recipient, to: sender });
     res.sendStatus(200);
   } catch (e) {
     debug('An error occurred: %o', e);
