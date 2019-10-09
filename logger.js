@@ -35,7 +35,7 @@ class Logger {
       googleDriveParentFolderId: params.googleDriveParentFolderId,
       normalizedStructure: params.normalizedStructure,
       normalizedReportName: params.normalizedReportName,
-      attachments: params.attachments,
+      attachments: JSON.stringify(params.attachments),
       start,
       sender: params.sender,
       end,
