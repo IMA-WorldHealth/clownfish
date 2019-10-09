@@ -38,3 +38,6 @@ nbproject/
 yarn-error.log
 *.log
 credentials/*
+
+# do not track sqlite3 databases
+*.db
