@@ -1,7 +1,11 @@
 const axios = require('axios');
 const debug = require('debug')('clownfish:email');
-const mailgun = require('mailgun-js');
 const fileType = require('file-type');
+
+const apiKey = process.env.MAILGUN_API_KEY;
+const domain = process.env.MAILGUN_DOMAIN;
+
+const mailgun = require('mailgun-js')({ apiKey, domain });
 
 const { Duplex } = require('stream');
 
@@ -31,20 +35,18 @@ async function downloadAttachment(attachment) {
 }
 
 
-async function sendMail(param) {
-  const apiKey = process.env.MAILGUN_API_KEY;
-  const domain = process.env.MAILGUN_DOMAIN;
-  const mailgunInit = mailgun({ apiKey, domain });
+function sendMail(param) {
+  debug(`Sending an email to ${param.to} from ${param.from}.`);
 
   const data = {
-    from: `No_reply <${param.from}>`,
+    from: param.from,
     to: param.to,
     subject: param.subject || 'Notification',
     text: param.txt || 'Votre message a été archivé avec succès!',
   };
 
-  return mailgunInit.messages().send(data, (error, body) => {
-    debug(`Email notification : ${body}`);
+  return mailgun.messages().send(data, (error, body) => {
+    debug(`MailGun API returned: ${JSON.stringify(body)}`);
   });
 }
 
