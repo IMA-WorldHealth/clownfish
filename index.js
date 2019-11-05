@@ -69,9 +69,8 @@ app.post('/:googleDriveParentFolderId/receive', async (req, res, next) => {
     if (attachments) {
       debug(`Located ${attachments.length} attachments.`);
       await utils.uploadAttachmentsToGoogleDrive(attachments, normalizedReportName, folderId);
+      debug(`Finished processing ${attachments.length} attachments`);
     }
-
-    debug(`Finished processing ${attachments.length} attachments`);
 
     const sender = mail.From;
     const recipient = mail.To;
