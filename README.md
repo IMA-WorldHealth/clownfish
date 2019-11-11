@@ -16,5 +16,24 @@ Send an email to the clownfish email address with the subject line `${structure}
 ## Overview
 ![Clownfish Overview](./docs/overview.svg "How it works")
 
+## Deploying with Docker
+
+There is a Dockerfile in this repository.  Deploying with Docker is relatively simple.
+
+```sh
+# clone into clownfish dir
+git clone https://github.com/IMA-WorldHealth/clownfish.git clownfish
+
+cd clownfish
+
+# build the docker file.  This will take a while.
+docker build -t <user>/clownfish .
+
+# deploy the docker file locally
+docker run --expose 7171:9191 -d jniles/clownfish
+
+# you can now connect to 127.0.0.1:9191 to connect to the local app instance
+```
+
 ## License
 [MIT](./LICENSE)
