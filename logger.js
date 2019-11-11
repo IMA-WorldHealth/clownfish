@@ -10,6 +10,8 @@ class Logger {
   constructor(name) {
     this.db = new Database(name || './database.db');
 
+    this.db.pragma('journal_mode = WAL');
+
     const createLoggerTableQuery = `
       CREATE TABLE IF NOT EXISTS logger (
         googleDriveParentFolderId INTEGER,
