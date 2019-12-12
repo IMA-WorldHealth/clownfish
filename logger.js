@@ -57,13 +57,15 @@ class Logger {
     const query = `
       SELECT
         googleDriveParentFolderId, normalizedStructure, normalizedReportName, attachments, start, sender, end, elapsed
-      FROM logger ORDER BY start DESC ${limit}
+      FROM logger
+      ORDER BY start DESC ${limit}
       `;
     const rows = this.db.prepare(query).all();
     rows.forEach((row) => {
       // eslint-disable-next-line no-param-reassign
       row.attachments = row.attachments ? JSON.parse(row.attachments) : [];
     });
+
     return rows;
   }
 }
