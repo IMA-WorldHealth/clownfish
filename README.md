@@ -1,6 +1,8 @@
 Clownfish
 =========
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/IMA-WorldHealth/clownfish.svg)](https://greenkeeper.io/)
+
 This application is a relay between [mailgun](https://www.mailgun.com/) and [Google Drive](https://drive.google.com).  It receives messages via mailgun's `notify()` route, downloads them, and archives them in Google Drive.  It is used for aggregating reports from health structures throughout IMA World Health's area of work.
 
 ## How it works
