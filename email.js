@@ -1,6 +1,6 @@
 const axios = require('axios');
 const debug = require('debug')('clownfish:email');
-const fileType = require('file-type');
+const FileType = require('file-type');
 
 const apiKey = process.env.MAILGUN_API_KEY;
 const domain = process.env.MAILGUN_DOMAIN;
@@ -22,7 +22,7 @@ async function downloadAttachment(attachment) {
   debug(`Fetching: ${attachment.url}`);
 
   const res = await relay.get(attachment.url, { responseType: 'arraybuffer' });
-  const type = fileType(res.data);
+  const type = await FileType.fromBuffer(res.data);
 
   debug(`Detected filetype: ${type.mime}`);
 
