@@ -10,6 +10,7 @@ const multer = require('multer');
 const fs = require('fs');
 const template = require('lodash.template');
 const email = require('./email');
+const db = require('./lib/db');
 
 const api = require('./api');
 const utils = require('./utils');
@@ -48,15 +49,23 @@ app.get('/', (req, res, next) => {
  * Receives post requests from mailgun and processes them to store them on Google Drive.  In order
  * to route multiple Google Drive accounts, we embed the Google Drive folder ID into the URL.
  */
-app.post('/:googleDriveParentFolderId/receive', upload.any(), async (req, res, next) => {
+app.post('/receive', upload.any(), async (req, res, next) => {
   try {
     const start = new Date();
     const mail = req.body;
 
-    const { googleDriveParentFolderId } = req.params;
+    debug('received a message!');
+
+    const row = db
+      .prepare('SELECT gdrive_folder_id FROM router WHERE email_address = ?;')
+      .get(mail.to);
+
+    const googleDriveParentFolderId = row.gdrive_folder_id;
+
+    debug(`Matched ${googleDriveParentFolderId} to address ${mail.to}.`);
+
     const { normalizedStructure, normalizedReportName } = utils.parseSubjectLine(mail.subject);
 
-    debug('received a message!');
     debug(`structure: ${normalizedStructure}`);
     debug(`report name: ${normalizedReportName}`);
 
