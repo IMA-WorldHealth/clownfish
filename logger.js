@@ -1,32 +1,17 @@
-const Database = require('better-sqlite3');
 const dayjs = require('dayjs');
 dayjs.extend(require('dayjs/plugin/relativeTime'));
 
+const db = require('./lib/db');
+
 /**
  * @class Logger
- * @description this class allows to read and write logs in the database
+ *
+ * @description
+ * This class allows to read and write logs in the database
  */
 class Logger {
-  constructor(name) {
-    this.db = new Database(name || './database.db');
-
-    this.db.pragma('journal_mode = WAL');
-
-    const createLoggerTableQuery = `
-      CREATE TABLE IF NOT EXISTS logger (
-        googleDriveParentFolderId INTEGER,
-        normalizedStructure TEXT,
-        normalizedReportName TEXT,
-        attachments TEXT,
-        start TEXT,
-        sender TEXT,
-        end TEXT,
-        elapsed TEXT
-      )`;
-
-    this.db
-      .prepare(createLoggerTableQuery)
-      .run();
+  constructor() {
+    this.db = db;
   }
 
   write(params) {
