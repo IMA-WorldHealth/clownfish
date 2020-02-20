@@ -1,6 +1,7 @@
+const { Duplex } = require('stream');
 const debug = require('debug')('clownfish');
+const path = require('path');
 const drive = require('./drive');
-const email = require('./email');
 
 function detectSeparator(subject) {
   if (subject.includes('--')) {
@@ -48,23 +49,34 @@ function parseSubjectLine(subject) {
   return { normalizedStructure, normalizedReportName };
 }
 
+// converts between buffers and streams
+function bufferToStream(buffer) {
+  const stream = new Duplex();
+  stream.push(buffer);
+  stream.push(null);
+  return stream;
+}
+
 /**
+ * @function uploadAttachmentsToGoogleDrive
  *
- *
+ * @description
+ * Takes attachments received as POST requests and uploads them to Google Drive.
  */
 async function uploadAttachmentsToGoogleDrive(attachments, normalizedReportName, parentFolderId) {
   // eslint-disable-next-line
   for (const attachment of attachments) {
     // eslint-disable-next-line
-    const bulk = await email.downloadAttachment(attachment);
+    const stream = bufferToStream(attachment.buffer);
+    const extension = path.extname(attachment.originalname);
 
-    const fname = `${normalizedReportName}.${bulk.ext}`;
+    const fname = `${normalizedReportName}.${extension}`;
     debug(`Uploading: ${fname}`);
 
     // eslint-disable-next-line
     await drive.files.create({
       resource: { name: fname, parents: [parentFolderId] },
-      media: { mimeType: bulk.mimeType, body: bulk.data },
+      media: { mimeType: attachment.mimetype, body: stream },
       fields: 'id',
     });
   }
