@@ -1,6 +1,6 @@
 {
   "name": "clownfish",
-  "version": "0.0.1",
+  "version": "3.0.0",
   "description": "A relay to save email attachments in Google Drive sent to an address with mailgun.",
   "main": "index.js",
   "repository": "https://github.com/ima-worldhealth/clownfish",
