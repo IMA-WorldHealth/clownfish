@@ -53,11 +53,7 @@ app.post('/:googleDriveParentFolderId/receive', upload.any(), async (req, res, n
     const start = new Date();
     const mail = req.body;
 
-    console.log('mail:', mail);
-    console.log('files:', req.files);
-
     const { googleDriveParentFolderId } = req.params;
-
     const { normalizedStructure, normalizedReportName } = utils.parseSubjectLine(mail.subject);
 
     debug('received a message!');
@@ -78,8 +74,7 @@ app.post('/:googleDriveParentFolderId/receive', upload.any(), async (req, res, n
       debug(`Finished processing ${attachments.length} attachments`);
     }
 
-    const sender = mail.From;
-    const recipient = mail.To;
+    const sender = mail.from;
 
     // write to log
     logger.write({
@@ -92,7 +87,7 @@ app.post('/:googleDriveParentFolderId/receive', upload.any(), async (req, res, n
       end: new Date(),
     });
 
-    email.send({ from: recipient, to: sender });
+    email.send({ from: mail.to, to: mail.from, subject: mail.subject });
     res.sendStatus(200);
   } catch (e) {
     debug('An error occurred: %o', e);

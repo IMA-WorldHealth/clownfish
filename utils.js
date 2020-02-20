@@ -70,7 +70,7 @@ async function uploadAttachmentsToGoogleDrive(attachments, normalizedReportName,
     const stream = bufferToStream(attachment.buffer);
     const extension = path.extname(attachment.originalname);
 
-    const fname = `${normalizedReportName}.${extension}`;
+    const fname = `${normalizedReportName}${extension}`;
     debug(`Uploading: ${fname}`);
 
     // eslint-disable-next-line

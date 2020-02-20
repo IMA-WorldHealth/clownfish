@@ -1,23 +1,36 @@
 const debug = require('debug')('clownfish:email');
 
-const apiKey = process.env.MAILGUN_API_KEY;
-const domain = process.env.MAILGUN_DOMAIN;
+const mailer = require('@sendgrid/mail');
 
-const mailgun = require('mailgun-js')({ apiKey, domain });
+mailer.setApiKey(process.env.SENDGRID_API_KEY);
 
-function sendMail(param) {
-  debug(`Sending an email to ${param.to} from ${param.from}.`);
+const body = `
+Bonjour,
 
-  const data = {
-    from: param.from,
-    to: param.to,
-    subject: param.subject || 'Notification',
-    text: param.txt || 'Votre message a été archivé avec succès!',
-  };
+Merci d'utiliser clownfish. Votre message intitulé "%TITLE%" a été archivé avec succès.
 
-  return mailgun.messages().send(data, (error, body) => {
-    debug(`MailGun API returned: ${JSON.stringify(body)}`);
-  });
+Merci,
+L'équipe IMA World Health
+`.trim();
+
+async function sendMail(params) {
+  debug(`Sending an email to ${params.to} from ${params.from}.`);
+
+  debug(`SendGrid: ${process.env.SENDGRID_API_KEY}`);
+
+  try {
+    const data = {
+      to: params.to,
+      from: params.from,
+      subject: params.subject,
+      text: body.replace('%TITLE%', params.subject),
+    };
+
+    await mailer.send(data);
+    debug(`Email successfully sent to ${data.to} with SendGrid`);
+  } catch (e) {
+    debug('An error occurred:', e.toString());
+  }
 }
 
 exports.send = sendMail;
