@@ -1,12 +1,12 @@
 require('dotenv').config();
 
-
 const {
   PORT,
 } = process.env;
 
 const debug = require('debug')('clownfish');
 const express = require('express');
+const multer = require('multer');
 const fs = require('fs');
 const template = require('lodash.template');
 const email = require('./email');
@@ -17,6 +17,8 @@ const sysinfo = require('./sysinfo');
 const logger = require('./logger')('clownfish.db');
 
 const render = template(fs.readFileSync('./views/index.html'));
+
+const upload = multer();
 
 const app = express();
 app.use(require('body-parser').json());
@@ -46,10 +48,14 @@ app.get('/', (req, res, next) => {
  * Receives post requests from mailgun and processes them to store them on Google Drive.  In order
  * to route multiple Google Drive accounts, we embed the Google Drive folder ID into the URL.
  */
-app.post('/:googleDriveParentFolderId/receive', async (req, res, next) => {
+app.post('/:googleDriveParentFolderId/receive', upload.any(), async (req, res, next) => {
   try {
     const start = new Date();
     const mail = req.body;
+
+    console.log('mail:', mail);
+    console.log('files:', req.files);
+
     const { googleDriveParentFolderId } = req.params;
 
     const { normalizedStructure, normalizedReportName } = utils.parseSubjectLine(mail.subject);
@@ -64,7 +70,7 @@ app.post('/:googleDriveParentFolderId/receive', async (req, res, next) => {
     debug(`Located folder for ${normalizedStructure} with id: ${folderId}`);
 
     // grab attachments if they exist.
-    const attachments = mail.attachments && JSON.parse(mail.attachments);
+    const attachments = req.files;
 
     if (attachments) {
       debug(`Located ${attachments.length} attachments.`);

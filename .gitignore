@@ -40,4 +40,4 @@ yarn-error.log
 credentials/*
 
 # do not track sqlite3 databases
-*.db
+*.db*
