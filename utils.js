@@ -3,6 +3,12 @@ const debug = require('debug')('clownfish');
 const path = require('path');
 const drive = require('./drive');
 
+function parseToAddress(address) {
+  const re = /<(.?*)>/;
+  const [_, parsed ] = re.exec(address);
+  return parsed || address;
+}
+
 function detectSeparator(subject) {
   if (subject.includes('--')) {
     return '--';
@@ -82,5 +88,6 @@ async function uploadAttachmentsToGoogleDrive(attachments, normalizedReportName,
   }
 }
 
+exports.parseToAddress = parseToAddress;
 exports.parseSubjectLine = parseSubjectLine;
 exports.uploadAttachmentsToGoogleDrive = uploadAttachmentsToGoogleDrive;

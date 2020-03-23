@@ -42,11 +42,6 @@ app.get('/', (req, res, next) => {
   }
 });
 
-function parseToAddress(address) {
-  const re = /<(.?*)>/;
-  const [_, parsed ] = re.exec(address);
-  return parsed || address;
-}
 
 /**
  * @function receive
@@ -62,12 +57,17 @@ app.post('/receive', upload.any(), async (req, res, next) => {
 
     debug('received a message!');
 
-    const toAddress = parseToAddress(mail.to)
+    const toAddress = utils.parseToAddress(mail.to);
 
     const row = db
       .prepare('SELECT gdrive_folder_id FROM router WHERE email_address = ?;')
       .get(toAddress);
-    ]
+
+    // attempt to route to support
+    if (toAddress.includes('support')) {
+      await email.support(mail);
+    }
+
     if (!row) {
       debug(`Could not find a matching record for address: ${toAddress}`);
       return;
@@ -116,5 +116,6 @@ app.post('/receive', upload.any(), async (req, res, next) => {
     next(e);
   }
 });
+
 
 app.listen(PORT, () => debug(`listening on port: ${PORT}.`));
