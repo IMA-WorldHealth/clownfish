@@ -50,6 +50,8 @@ async function support(params) {
   }
 
   try {
+    delete params.attachments; // eslint-disable-line
+    delete params.headers; // eslint-disable-line
     await mailer.send(params);
     debug(`Email successfully sent to ${params.to} with SendGrid`);
   } catch (e) {
