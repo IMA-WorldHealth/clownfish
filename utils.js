@@ -4,9 +4,14 @@ const path = require('path');
 const drive = require('./drive');
 
 function parseToAddress(address) {
-  const re = /<(.?*)>/;
-  const [_, parsed ] = re.exec(address);
-  return parsed || address;
+  const re = /<(.*?)>/;
+  const result = re.exec(address);
+  if (result) {
+    const [_, parsed] = result;
+    return parsed;
+  }
+
+  return address;
 }
 
 function detectSeparator(subject) {
