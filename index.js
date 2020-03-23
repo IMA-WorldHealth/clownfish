@@ -70,6 +70,8 @@ app.post('/receive', upload.any(), async (req, res, next) => {
 
     if (!row) {
       debug(`Could not find a matching record for address: ${toAddress}`);
+      res.sendStatus(200);
+      next();
       return;
     }
 
