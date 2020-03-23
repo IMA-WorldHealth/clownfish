@@ -60,6 +60,11 @@ app.post('/receive', upload.any(), async (req, res, next) => {
       .prepare('SELECT gdrive_folder_id FROM router WHERE email_address = ?;')
       .get(mail.to);
 
+    if (!row) {
+      debug(`Could not find a matching record for address: ${mail.to}`);
+      return;
+    }
+
     const googleDriveParentFolderId = row.gdrive_folder_id;
 
     debug(`Matched ${googleDriveParentFolderId} to address ${mail.to}.`);
