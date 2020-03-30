@@ -1,6 +1,9 @@
 status = [
-  "continuous-integration/travis-ci/push",
+  "continuous-integration/travis-ci/push"
 ]
 
-delete_merged_branches = true
 use_squash_merge = true
+
+timeout_sec = 14400
+
+cut_body_after = "</details>"
