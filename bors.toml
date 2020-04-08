@@ -2,8 +2,6 @@ status = [
   "continuous-integration/travis-ci/push"
 ]
 
-use_squash_merge = true
-
 timeout_sec = 14400
 
 cut_body_after = "</details>"
