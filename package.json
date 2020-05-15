@@ -17,7 +17,7 @@
     "eslint": "^7.0.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
-    "release-it": "^13.5.8"
+    "release-it": "^13.6.0"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.1.0",
