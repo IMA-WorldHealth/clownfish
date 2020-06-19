@@ -1,0 +1,5 @@
+bors.toml
+test/
+Dockerfile
+/.env
+/.eslintrc*
