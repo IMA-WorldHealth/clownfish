@@ -6,28 +6,25 @@ const {
 
 const debug = require('debug')('clownfish');
 const express = require('express');
-const fs = require('fs');
-const template = require('lodash.template');
-
-const sysinfo = require('./sysinfo');
-
-const render = template(fs.readFileSync('./views/index.html'));
+const sysinfo = require('./lib/sysinfo');
+const db = require('./lib/db');
 
 const app = express();
+app.set('view engine', 'pug');
 app.use(require('body-parser').json());
 app.use(require('body-parser').urlencoded({ extended: true }));
 
 app.get('/', (req, res, next) => {
   try {
     const info = sysinfo();
-    const rendered = render({
-      title: 'Clownfish',
-      subtitle: 'by IMA World Health',
-      log: [],
-      info,
-    });
 
-    res.status(200).send(rendered);
+    const logs = db
+      .prepare('SELECT * FROM inbox ORDER BY timestamp DESC LIMIT 10;')
+      .all();
+
+    res.render('index', {
+      info, title: 'Clownfish', subtitle: 'by IMA World Health', logs,
+    });
   } catch (e) {
     debug('An error occurred: %o', e);
     next(e);
