@@ -10,7 +10,6 @@ const fs = require('fs');
 const template = require('lodash.template');
 
 const sysinfo = require('./sysinfo');
-const logger = require('./logger')('clownfish.db');
 
 const render = template(fs.readFileSync('./views/index.html'));
 
@@ -24,7 +23,7 @@ app.get('/', (req, res, next) => {
     const rendered = render({
       title: 'Clownfish',
       subtitle: 'by IMA World Health',
-      log: logger.read(10),
+      log: [],
       info,
     });
 
