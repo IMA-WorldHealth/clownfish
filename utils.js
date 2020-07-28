@@ -1,6 +1,8 @@
 const { Duplex } = require('stream');
-const debug = require('debug')('clownfish');
+const debug = require('debug')('clownfish:utils');
 const path = require('path');
+const fs = require('fs');
+const os = require('os');
 const drive = require('./drive');
 
 function parseToAddress(address) {
@@ -22,7 +24,6 @@ function detectSeparator(subject) {
   if (subject.includes('-')) {
     return '-';
   }
-
 
   if (subject.includes('–')) {
     return '–';
@@ -60,14 +61,6 @@ function parseSubjectLine(subject) {
   return { normalizedStructure, normalizedReportName };
 }
 
-// converts between buffers and streams
-function bufferToStream(buffer) {
-  const stream = new Duplex();
-  stream.push(buffer);
-  stream.push(null);
-  return stream;
-}
-
 /**
  * @function uploadAttachmentsToGoogleDrive
  *
@@ -78,8 +71,8 @@ async function uploadAttachmentsToGoogleDrive(attachments, normalizedReportName,
   // eslint-disable-next-line
   for (const attachment of attachments) {
     // eslint-disable-next-line
-    const stream = bufferToStream(attachment.buffer);
-    const extension = path.extname(attachment.originalname);
+    const stream = fs.createReadStream(attachment.localFileName);
+    const extension = path.extname(attachment.localFileName);
 
     const fname = `${normalizedReportName}${extension}`;
     debug(`Uploading: ${fname}`);
@@ -87,12 +80,32 @@ async function uploadAttachmentsToGoogleDrive(attachments, normalizedReportName,
     // eslint-disable-next-line
     await drive.files.create({
       resource: { name: fname, parents: [parentFolderId] },
-      media: { mimeType: attachment.mimetype, body: stream },
+      media: { mimeType: attachment.contentType, body: stream },
       fields: 'id',
     });
   }
 }
 
+function getTempFileName(fname) {
+  return path.join(os.tmpdir(), `${Date.now()}-${fname}`);
+}
+
+// save an attachment to a temporary file
+async function saveAttachmentToTempFile({ meta, content }) {
+  debug('Computing filename:', meta.filename);
+  const fname = getTempFileName(meta.filename);
+  const out = fs.createWriteStream(fname);
+  await new Promise((resolve, reject) => {
+    content.pipe(out);
+    out.once('finish', resolve);
+    out.once('error', reject);
+  });
+
+  debug(`saved file to ${fname}`);
+  return fname;
+}
+
+exports.saveAttachmentToTempFile = saveAttachmentToTempFile;
 exports.parseToAddress = parseToAddress;
 exports.parseSubjectLine = parseSubjectLine;
 exports.uploadAttachmentsToGoogleDrive = uploadAttachmentsToGoogleDrive;
