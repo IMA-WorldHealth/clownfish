@@ -1,5 +1,5 @@
 const test = require('ava');
-const utils = require('../utils');
+const utils = require('../lib/utils');
 
 test('#parseToAddress() is an identity if no parsing necessary', (t) => {
   const addr = 'support@bhi.ma';
