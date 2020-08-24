@@ -20,7 +20,7 @@
     "release-it": "^13.6.9"
   },
   "dependencies": {
-    "@ima-worldhealth/cron-scheduler": "^1.5.0",
+    "@ima-worldhealth/cron-scheduler": "^1.5.1",
     "axios": "^0.20.0",
     "better-sqlite3": "^7.1.0",
     "body-parser": "^1.19.0",
