@@ -273,7 +273,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*", "@types/node@14.0.27", "@types/node@>= 8":
+"@types/node@*", "@types/node@>= 8":
   version "14.0.27"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.27.tgz#a151873af5a5e851b51b3b065c9e63390a9e0eb1"
   integrity sha512-kVrqXhbclHNHGu9ztnAwSncIgJv/FaxmzXJvGXNdcCpV1b8u1/Mi6z6m0vwy0LzKeXFTPLH0NzwmoJ3fNCIq0g==
@@ -2248,12 +2248,11 @@ ignore@^5.1.1, ignore@^5.1.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
-imapflow@^1.0.48:
-  version "1.0.48"
-  resolved "https://registry.yarnpkg.com/imapflow/-/imapflow-1.0.48.tgz#b6a4a7f085c5400c3bae8fdf31bac4da17e8381a"
-  integrity sha512-/+wLp5046asAnW3NyqckgHEHC8lJ/RAwtNbHFjhbuYLPKiUK1RbdSm6ByhO5YNkTKIQWXVd/xMtggRBn45WW+w==
+imapflow@^1.0.50:
+  version "1.0.50"
+  resolved "https://registry.yarnpkg.com/imapflow/-/imapflow-1.0.50.tgz#e1e6e1d78123af9f8704b7a172a28796ebf0e105"
+  integrity sha512-i3qfSltmKvgvXMcEsDc2D/2/a0YSCakdD2lOaXj9FrkG+HlE0I3dqFmOctipBXWLkRlYmgRAScxN7K2I/qxvUg==
   dependencies:
-    "@types/node" "14.0.27"
     encoding-japanese "1.0.30"
     iconv-lite "0.6.2"
     libbase64 "1.2.1"
