@@ -16,7 +16,7 @@
     "ava": "^3.12.1",
     "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import": "^2.22.1",
     "release-it": "^14.0.3"
   },
   "dependencies": {
