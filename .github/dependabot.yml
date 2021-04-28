@@ -1,0 +1,33 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 99
+  ignore:
+  - dependency-name: eslint
+    versions:
+    - 7.19.0
+    - 7.20.0
+    - 7.21.0
+    - 7.22.0
+    - 7.24.0
+  - dependency-name: googleapis
+    versions:
+    - 67.1.0
+    - 68.0.0
+    - 70.0.0
+    - 71.0.0
+  - dependency-name: release-it
+    versions:
+    - 14.4.1
+    - 14.5.0
+    - 14.5.1
+  - dependency-name: imapflow
+    versions:
+    - 1.0.55
+  - dependency-name: pug-code-gen
+    versions:
+    - 3.0.2
