@@ -29,7 +29,7 @@
     "dotenv": "^9.0.0",
     "express": "^4.17.1",
     "file-type": "^16.3.0",
-    "googleapis": "^67.1.1",
+    "googleapis": "^73.0.0",
     "imapflow": "^1.0.57",
     "moment": "^2.29.1",
     "multer": "^1.4.2",
