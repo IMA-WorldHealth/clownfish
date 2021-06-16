@@ -2240,6 +2240,13 @@ iconv-lite@0.6.2:
   dependencies:
     safer-buffer ">= 2.1.2 < 3.0.0"
 
+iconv-lite@0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"
+  integrity sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==
+  dependencies:
+    safer-buffer ">= 2.1.2 < 3.0.0"
+
 ieee754@^1.1.13, ieee754@^1.1.4:
   version "1.1.13"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.13.tgz#ec168558e95aa181fd87d37f55c32bbcb6708b84"
@@ -2260,13 +2267,13 @@ ignore@^5.1.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
-imapflow@^1.0.57:
-  version "1.0.57"
-  resolved "https://registry.yarnpkg.com/imapflow/-/imapflow-1.0.57.tgz#b5e59f6af0ecac67588ac3797ca707b320cd768e"
-  integrity sha512-mHHL6+kbKovD76tkjhGtfAHzRVfaZPW1wBa5xFJgBv5nHOLjd2ECd2IRumkSTIaY2D08Q/VFzndYVH4BqsuybQ==
+imapflow@^1.0.59:
+  version "1.0.59"
+  resolved "https://registry.yarnpkg.com/imapflow/-/imapflow-1.0.59.tgz#608abc3c9c1196d58fe06cf8f774589b95f0f515"
+  integrity sha512-E61kgUhT2HuooyjTXdGwVPhdv/CfiTAYWKAtdHcRHpyzeKwP6VibsmeiG5FgKLa66UjQEOY6lFz9U9MQnzMWRA==
   dependencies:
     encoding-japanese "1.0.30"
-    iconv-lite "0.6.2"
+    iconv-lite "0.6.3"
     libbase64 "1.2.1"
     libmime "5.0.0"
     libqp "1.1.0"
