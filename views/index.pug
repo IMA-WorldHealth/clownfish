@@ -4,6 +4,7 @@ html
     title Clownfish App by IMA World Health
     link(href="https://unpkg.com/sanitize.css" rel="stylesheet")
     link(href="https://unpkg.com/sanitize.css/typography.css" rel="stylesheet")
+    link(href="https://unpkg.com/bulma@0.9.3/css/bulma.min.css")
     style.
       body {
         background-color: #fefefe;
@@ -91,24 +92,3 @@ html
           li #[b Process Uptime:] #{info.uptime}
           li #[b System Uptime:] #{info.sysuptime}
           li #[b Node Version:] #{info.nodeversion}
-
-      section#log
-         h4 Interaction Logs
-         table
-           thead
-             tr
-               th Seq
-               th Date
-               th Message ID
-               th From
-               th Subject
-               th Attachments
-           tbody
-             for row of logs
-               tr
-                 td= row.seq
-                 td= row.date
-                 td= row.message_id
-                 td= row.from_address
-                 td= row.subject
-                 td= row.attachments
