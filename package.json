@@ -28,7 +28,7 @@
     "debug": "^4.3.1",
     "dotenv": "^9.0.0",
     "express": "^4.17.1",
-    "file-type": "^16.3.0",
+    "file-type": "^16.5.1",
     "googleapis": "^67.1.1",
     "imapflow": "^1.0.57",
     "moment": "^2.29.1",
