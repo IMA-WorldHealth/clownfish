@@ -34,6 +34,8 @@ app.get('/', (req, res, next) => {
       .prepare('SELECT * FROM inbox ORDER BY timestamp DESC LIMIT 10;')
       .all();
 
+    console.log('logs:', JSON.stringify(logs));
+
     res.render('index', {
       info, title: 'Clownfish', subtitle: 'by IMA World Health', logs,
     });

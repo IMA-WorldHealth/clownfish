@@ -92,3 +92,22 @@ html
           li #[b Process Uptime:] #{info.uptime}
           li #[b System Uptime:] #{info.sysuptime}
           li #[b Node Version:] #{info.nodeversion}
+
+      hr
+
+      section#logs
+        if logs
+          table
+            thead
+              tr
+                th From
+                th Subject
+                th Timestamp
+                th Share URL
+            tbody
+              each log in logs
+                tr
+                  td #{log.from_address}
+                  td #{log.subject}
+                  td #{log.timestamp}
+                  td: a(href=log.share) #{log.share}

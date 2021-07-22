@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `inbox` (
   from_address TEXT NOT NULL,
   subject TEXT NOT NULL,
   attachments TEXT NOT NULL,
+  share TEXT NULL,
   date DATETIME NOT NULL,
   timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (smtp_id) REFERENCES smtp (id)
