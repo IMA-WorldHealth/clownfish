@@ -3942,7 +3942,7 @@ registry-url@^5.0.0:
   dependencies:
     rc "^1.2.8"
 
-release-it@^14.4.0:
+release-it@^14.10.1:
   version "14.10.1"
   resolved "https://registry.npmjs.org/release-it/-/release-it-14.10.1.tgz#5416887e6568347bd9b19de88b5371b0466dfb23"
   integrity sha512-uC+LtV9vlcFOAkclJYnANNlufLoESZPjC5wGeKoW/Y91jJp0bfQv6/iU44a7rmZ4LHy3q52JD54jNe45RUOPYw==
