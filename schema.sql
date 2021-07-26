@@ -22,7 +22,8 @@ CREATE TABLE IF NOT EXISTS `smtp` (
   host TEXT NOT NULL, -- mail.domain.com
   username TEXT NOT NULL, -- user@mail.domain.com
   password TEXT NOT NULL,
-  paused BOOLEAN NOT NULL DEFAULT FALSE
+  paused BOOLEAN NOT NULL DEFAULT FALSE,
+  active BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 -- inbox
