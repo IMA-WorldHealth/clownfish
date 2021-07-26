@@ -13,7 +13,6 @@ Importantly, the `emails.seq` record must match the latest IMAP sequence
 from the folder.  It will be used for looking up new emails.
 
 The `envelope` is optional.  It contains the message body for posterity.
-
 */
 
 -- SMTP credentials for different servers.  Each email host maps
@@ -23,9 +22,8 @@ CREATE TABLE IF NOT EXISTS `smtp` (
   host TEXT NOT NULL, -- mail.domain.com
   username TEXT NOT NULL, -- user@mail.domain.com
   password TEXT NOT NULL,
-  gdrive_folder_id TEXT NOT NULL,
   paused BOOLEAN NOT NULL DEFAULT FALSE,
-  UNIQUE (gdrive_folder_id, username) ON CONFLICT REPLACE
+  active BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 -- inbox
@@ -36,8 +34,14 @@ CREATE TABLE IF NOT EXISTS `inbox` (
   from_address TEXT NOT NULL,
   subject TEXT NOT NULL,
   attachments TEXT NOT NULL,
+  share TEXT NULL,
   date DATETIME NOT NULL,
-  gdrive_id TEXT NOT NULL,
   timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (smtp_id) REFERENCES smtp (id)
+);
+
+-- for shares
+CREATE TABLE IF NOT EXISTS `folders` (
+  folder TEXT PRIMARY KEY NOT NULL ,
+  share_url TEXT NOT NULL
 );

@@ -1,18 +1,11 @@
 Clownfish
 =========
 
-This application is a relay between [SendGrid](https://sendgrid.com) and [Google Drive](https://drive.google.com).  It receives messages via SendGrid's Inbound Parse API, downloads them, and archives them in Google Drive.  It is used for aggregating reports from health structures throughout IMA World Health's area of work.
+This application is a relay between [imapflow](https://imapflow.com/) and [NextCloud](https://nextcloud.com/).  It receives messages from the IMAP server, downloads them, and archives them in NextCloud.  It is used for aggregating reports from health structures throughout IMA World Health's area of work.
 
-## How it works
+# How it works
 
-As prerequisite, you must have a SendGrid account and a domain the hosts the clownfish application.  For example: `clownfish.example.com`.
- 1. Configure SendGrid's Inbound Parse to forward to the url `clownfish.example.com/receive`.
- 2. Configure your google account with an OAuth account to use, and put the resulting `credentials.json` in the `credentials/` folder.
- 3. Create a folder on Google Drive, and share it with relevant parties.  Determine the folder ID from the Google Drive URL and add the id as an environmental variable as `GDRIVE_REPORT_DIR_ID`.
- 4. Deploy the application at `clownfish.example.com`.
- 5. Insert into the `router` table the values incoming email address and
-
-Send an email to the clownfish email address with the subject line `${structure} - ${report name}`.  The application will download any attachments on that email and upload them to a Google Drive folder named `${structure}`.  If this folder does not exist, it will first create the folder and then upload the files to the folder.
+Send an email to the clownfish email address with the subject line `${structure} - ${report name}`.  The application will download any attachments on that email and upload them to NextCloud folder named `${structure}`.  If this folder does not exist, it will first create the folder and then upload the files to the folder.
 
 ## Overview
 ![Clownfish Overview](./docs/overview.svg "How it works")
