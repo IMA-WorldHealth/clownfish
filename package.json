@@ -29,7 +29,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-openid-connect": "^2.5.0",
-    "file-type": "^16.3.0",
+    "file-type": "^16.5.3",
     "imapflow": "^1.0.57",
     "moment": "^2.29.1",
     "multer": "^1.4.2",
