@@ -32,7 +32,7 @@
     "file-type": "^16.3.0",
     "imapflow": "^1.0.57",
     "moment": "^2.29.1",
-    "multer": "^1.4.2",
+    "multer": "^1.4.3",
     "nextcloud-node-client": "^1.8.1",
     "nodemailer": "^6.6.0",
     "pug": "^3.0.2",
