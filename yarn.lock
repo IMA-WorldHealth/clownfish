@@ -1796,6 +1796,11 @@ fast-xml-parser@^3.16.0:
   resolved "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-3.19.0.tgz#cb637ec3f3999f51406dd8ff0e6fc4d83e520d01"
   integrity sha512-4pXwmBplsCPv8FOY1WRakF970TjNGnGnfbOnLqjlYvMiF1SR3yOHyxMR/YCXpPTOspNF5gwudqktIP4VsWkvBg==
 
+fastify-warning@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/fastify-warning/-/fastify-warning-0.2.0.tgz#e717776026a4493dc9a2befa44db6d17f618008f"
+  integrity sha512-s1EQguBw/9qtc1p/WTY4eq9WMRIACkj+HTcOIK1in4MV5aFaQC9ZCIt0dJ7pr5bIf4lPpHvAtP2ywpTNgs7hqw==
+
 fastq@^1.6.0:
   version "1.12.0"
   resolved "https://registry.npmjs.org/fastq/-/fastq-1.12.0.tgz#ed7b6ab5d62393fb2cc591c853652a5c318bf794"
@@ -2273,18 +2278,18 @@ ignore@^5.1.4:
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
-imapflow@^1.0.57:
-  version "1.0.67"
-  resolved "https://registry.npmjs.org/imapflow/-/imapflow-1.0.67.tgz#bae351e9ca7f856e85e6cb40099732b8ab851401"
-  integrity sha512-ZT3snAWOztU1Obx0rNK2KH32aY5u1ziRghOqQVLOyAn+aP7CKwzuXzJgqFQkoxX/vCr4G00/1c+jLyTYqp6ViQ==
+imapflow@^1.0.68:
+  version "1.0.68"
+  resolved "https://registry.yarnpkg.com/imapflow/-/imapflow-1.0.68.tgz#c3005a652ebafba2e802af17c0e1a49cb252f12a"
+  integrity sha512-Poc991q7qGX4aOmAlWuDOYJyFPPrtoacopgTmbvntUwPLNoV58CIoLvpZGv6Qg1MyrWNp8LertU8OiQlO2I0QQ==
   dependencies:
     encoding-japanese "1.0.30"
     iconv-lite "0.6.3"
     libbase64 "1.2.1"
     libmime "5.0.0"
     libqp "1.1.0"
-    mailsplit "5.0.1"
-    pino "6.13.0"
+    mailsplit "5.2.0"
+    pino "6.13.2"
 
 import-cwd@3.0.0:
   version "3.0.0"
@@ -2898,10 +2903,10 @@ macos-release@^2.5.0:
   resolved "https://registry.npmjs.org/macos-release/-/macos-release-2.5.0.tgz#067c2c88b5f3fb3c56a375b2ec93826220fa1ff2"
   integrity sha512-EIgv+QZ9r+814gjJj0Bt5vSLJLzswGmSUbUpbi9AIr/fsN2IWFBl2NucV9PAiek+U1STK468tEkxmVYUtuAN3g==
 
-mailsplit@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.npmjs.org/mailsplit/-/mailsplit-5.0.1.tgz#070bd883bddc0c6c7f5c6ea4a54847729d95dc6f"
-  integrity sha512-CcGy1sv8j9jdjKiNIuMZYIKhq4s47nUj9Q98BZfptabH/whmiQX7EvrHx36O4DcyPEsnG152GVNyvqPi9FNIew==
+mailsplit@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/mailsplit/-/mailsplit-5.2.0.tgz#c9b5154d05d661f793e7b902747a4241fcceee47"
+  integrity sha512-B6bXTcriVWOkU4REELr87iWRbV6tvF6w5AX84AFNyd1vxFv9ppIFqE5vnPptWqF1q/jnAmsInKf4wmImCD6bCQ==
   dependencies:
     libbase64 "1.2.1"
     libmime "5.0.0"
@@ -3591,13 +3596,14 @@ pino-std-serializers@^3.1.0:
   resolved "https://registry.npmjs.org/pino-std-serializers/-/pino-std-serializers-3.2.0.tgz#b56487c402d882eb96cd67c257868016b61ad671"
   integrity sha512-EqX4pwDPrt3MuOAAUBMU0Tk5kR/YcCM5fNPEzgCO2zJ5HfX0vbiH9HbJglnyeQsN96Kznae6MWD47pZB5avTrg==
 
-pino@6.13.0:
-  version "6.13.0"
-  resolved "https://registry.npmjs.org/pino/-/pino-6.13.0.tgz#41810b9be213af6f8f7c23a1b17058d880267e7b"
-  integrity sha512-mRXSTfa34tbfrWqCIp1sUpZLqBhcoaGapoyxfEwaWwJGMpLijlRdDKIQUyvq4M3DUfFH5vEglwSw8POZYwbThA==
+pino@6.13.2:
+  version "6.13.2"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-6.13.2.tgz#948a0fcadca668f3b5fb8a427f2854b08661eccf"
+  integrity sha512-vmD/cabJ4xKqo9GVuAoAEeQhra8XJ7YydPV/JyIP+0zDtFTu5JSKdtt8eksGVWKtTSrNGcRrzJ4/IzvUWep3FA==
   dependencies:
     fast-redact "^3.0.0"
     fast-safe-stringify "^2.0.8"
+    fastify-warning "^0.2.0"
     flatstr "^1.0.12"
     pino-std-serializers "^3.1.0"
     quick-format-unescaped "^4.0.3"
