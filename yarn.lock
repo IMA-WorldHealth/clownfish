@@ -89,10 +89,10 @@
   resolved "https://registry.npmjs.org/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
-"@ima-worldhealth/cron-scheduler@^1.7.0":
-  version "1.7.0"
-  resolved "https://registry.npmjs.org/@ima-worldhealth/cron-scheduler/-/cron-scheduler-1.7.0.tgz#fce0b4662c8f0319c5d101b0dd2b400b25e1b6ea"
-  integrity sha512-1kAJ++AjNlkj7dkPnJyAh5LclqRtbJDPznufCteRZAYun1oVPKTjy13qcTfCLzCia4459fC8a0PreSjiLDGGJA==
+"@ima-worldhealth/cron-scheduler@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@ima-worldhealth/cron-scheduler/-/cron-scheduler-1.8.0.tgz#1ffd7ba0dc9c9fde674b2422fc21cf7432f906b9"
+  integrity sha512-F58MCjP9a9snpxUNfF89Ak6QVMJsHop1YfNOuMzSGQELK40Ze2opHhvXs0U96AaOpqtTDcMaceWoxY17gH3D3A==
   dependencies:
     any-promise "^1.3.0"
     cron-converter "^1.0.0"
