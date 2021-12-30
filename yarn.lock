@@ -1762,11 +1762,6 @@ fast-xml-parser@^3.16.0:
   dependencies:
     strnum "^1.0.4"
 
-fastify-warning@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/fastify-warning/-/fastify-warning-0.2.0.tgz#e717776026a4493dc9a2befa44db6d17f618008f"
-  integrity sha512-s1EQguBw/9qtc1p/WTY4eq9WMRIACkj+HTcOIK1in4MV5aFaQC9ZCIt0dJ7pr5bIf4lPpHvAtP2ywpTNgs7hqw==
-
 fastq@^1.6.0:
   version "1.13.0"
   resolved "https://registry.npmjs.org/fastq/-/fastq-1.13.0.tgz#616760f88a7526bdfc596b7cab8c18938c36b98c"
@@ -2227,10 +2222,10 @@ ignore@^5.1.4:
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.1.9.tgz#9ec1a5cbe8e1446ec60d4420060d43aa6e7382fb"
   integrity sha512-2zeMQpbKz5dhZ9IwL0gbxSW5w0NK/MSAMtNuhgIHEPmaU3vPdKPL0UdvUCXs5SS4JAwsBxysK5sFMW8ocFiVjQ==
 
-imapflow@^1.0.74:
-  version "1.0.78"
-  resolved "https://registry.npmjs.org/imapflow/-/imapflow-1.0.78.tgz#500cd8a4f691f23232fb7d6e2b1c280340cd9dce"
-  integrity sha512-O0HRPmWjEifxc5sLFs1+gUA3Fy0Lz64aqvf1XwXNjZxBb72E5gCvBx9n1F613FizlnclVIjtnecNQHYTxGWCRA==
+imapflow@^1.0.79:
+  version "1.0.79"
+  resolved "https://registry.yarnpkg.com/imapflow/-/imapflow-1.0.79.tgz#05775dec02f52155fd90d1f94f4c2f17e17a3cf9"
+  integrity sha512-/EUnMi0brfhGMmj4/WPKzAZ/POL3/yFgTbzo5x7a+8f5KDzBfNvCl3oRgpxvylX2MpcA2aRvu/Qc9ss+Z2tR1w==
   dependencies:
     encoding-japanese "1.0.30"
     iconv-lite "0.6.3"
@@ -2239,7 +2234,7 @@ imapflow@^1.0.74:
     libqp "1.1.0"
     mailsplit "5.3.1"
     nodemailer "6.7.2"
-    pino "7.4.1"
+    pino "7.6.2"
     socks "2.6.1"
 
 import-cwd@3.0.0:
@@ -3527,17 +3522,16 @@ pino-std-serializers@^4.0.0:
   resolved "https://registry.npmjs.org/pino-std-serializers/-/pino-std-serializers-4.0.0.tgz#1791ccd2539c091ae49ce9993205e2cd5dbba1e2"
   integrity sha512-cK0pekc1Kjy5w9V2/n+8MkZwusa6EyyxfeQCB799CQRhRt/CqYKiWs5adeu8Shve2ZNffvfC/7J64A2PJo1W/Q==
 
-pino@7.4.1:
-  version "7.4.1"
-  resolved "https://registry.npmjs.org/pino/-/pino-7.4.1.tgz#ccac88e77563bab9b1ced05521b5eb94f17ec7e1"
-  integrity sha512-dVqLxCSsINhHJQP9wXplhYtSFwNLrFtOeVK/gWeprF+KVlibR0zePBPRPZjWzWeCY2CmtFzQE09rcZiM3GO2og==
+pino@7.6.2:
+  version "7.6.2"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-7.6.2.tgz#73d09dcf13079fd0a2fa7e8648f715d5082e63d8"
+  integrity sha512-GTzW+HHOzUTaPIyvK6tasky2jMXF1o3iw7Oc2ik7qFjcaexXfyn6ej72XwX4O+wuRyFCbp3oKpv00htrPddv5A==
   dependencies:
     fast-redact "^3.0.0"
-    fastify-warning "^0.2.0"
-    get-caller-file "^2.0.5"
     on-exit-leak-free "^0.2.0"
     pino-abstract-transport v0.5.0
     pino-std-serializers "^4.0.0"
+    process-warning "^1.0.0"
     quick-format-unescaped "^4.0.3"
     real-require "^0.1.0"
     safe-stable-stringify "^2.1.0"
@@ -3613,6 +3607,11 @@ process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
+
+process-warning@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/process-warning/-/process-warning-1.0.0.tgz#980a0b25dc38cd6034181be4b7726d89066b4616"
+  integrity sha512-du4wfLyj4yCZq1VupnVSZmRsPJsNuxoDQFdCFHLaYiEbFBD7QE0a+I4D7hOxrVnh78QE/YipFAj9lXHiXocV+Q==
 
 progress@^2.0.0:
   version "2.0.3"
