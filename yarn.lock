@@ -2185,10 +2185,10 @@ ignore@^5.1.4, ignore@^5.2.0:
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
 
-imapflow@^1.0.74:
-  version "1.0.79"
-  resolved "https://registry.npmjs.org/imapflow/-/imapflow-1.0.79.tgz#05775dec02f52155fd90d1f94f4c2f17e17a3cf9"
-  integrity sha512-/EUnMi0brfhGMmj4/WPKzAZ/POL3/yFgTbzo5x7a+8f5KDzBfNvCl3oRgpxvylX2MpcA2aRvu/Qc9ss+Z2tR1w==
+imapflow@^1.0.80:
+  version "1.0.80"
+  resolved "https://registry.yarnpkg.com/imapflow/-/imapflow-1.0.80.tgz#c86697ecff59c960413806155830829ae33449b8"
+  integrity sha512-81dtSOw43oICj0I6hjTdWBp9Rpq6oYxQuiSdRds3H7hIiS0Q7547FnkZLUoPcKlyPoFzCGMg+FU6OL3yeO9Nnw==
   dependencies:
     encoding-japanese "1.0.30"
     iconv-lite "0.6.3"
@@ -2197,8 +2197,8 @@ imapflow@^1.0.74:
     libqp "1.1.0"
     mailsplit "5.3.1"
     nodemailer "6.7.2"
-    pino "7.6.2"
-    socks "2.6.1"
+    pino "7.6.5"
+    socks "2.6.2"
 
 import-cwd@3.0.0:
   version "3.0.0"
@@ -3465,10 +3465,10 @@ pino-std-serializers@^4.0.0:
   resolved "https://registry.npmjs.org/pino-std-serializers/-/pino-std-serializers-4.0.0.tgz#1791ccd2539c091ae49ce9993205e2cd5dbba1e2"
   integrity sha512-cK0pekc1Kjy5w9V2/n+8MkZwusa6EyyxfeQCB799CQRhRt/CqYKiWs5adeu8Shve2ZNffvfC/7J64A2PJo1W/Q==
 
-pino@7.6.2:
-  version "7.6.2"
-  resolved "https://registry.npmjs.org/pino/-/pino-7.6.2.tgz#73d09dcf13079fd0a2fa7e8648f715d5082e63d8"
-  integrity sha512-GTzW+HHOzUTaPIyvK6tasky2jMXF1o3iw7Oc2ik7qFjcaexXfyn6ej72XwX4O+wuRyFCbp3oKpv00htrPddv5A==
+pino@7.6.5:
+  version "7.6.5"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-7.6.5.tgz#a8bf9bfacbbcb78b4fe34f9378c29ef229b07b5d"
+  integrity sha512-38tAwlJ7HevMENHD5FZE+yxSlAH5Wg3FoOjbB3MX2j3/kgpOEkmDHhTVKkecR57qxD5doHo2yi9nac94gqqbiQ==
   dependencies:
     fast-redact "^3.0.0"
     on-exit-leak-free "^0.2.0"
@@ -4132,18 +4132,18 @@ slice-ansi@^3.0.0:
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
 
-smart-buffer@^4.1.0:
+smart-buffer@^4.2.0:
   version "4.2.0"
-  resolved "https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz#6e1d71fa4f18c05f7d0ff216dd16a481d0e8d9ae"
+  resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.2.0.tgz#6e1d71fa4f18c05f7d0ff216dd16a481d0e8d9ae"
   integrity sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==
 
-socks@2.6.1:
-  version "2.6.1"
-  resolved "https://registry.npmjs.org/socks/-/socks-2.6.1.tgz#989e6534a07cf337deb1b1c94aaa44296520d30e"
-  integrity sha512-kLQ9N5ucj8uIcxrDwjm0Jsqk06xdpBjGNQtpXy4Q8/QY2k+fY7nZH8CARy+hkbG+SGAovmzzuauCpBlb8FrnBA==
+socks@2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/socks/-/socks-2.6.2.tgz#ec042d7960073d40d94268ff3bb727dc685f111a"
+  integrity sha512-zDZhHhZRY9PxRruRMR7kMhnf3I8hDs4S3f9RecfnGxvcBHQcKcIH/oUcEWffsfl1XxdYlA7nnlGbbTvPz9D8gA==
   dependencies:
     ip "^1.1.5"
-    smart-buffer "^4.1.0"
+    smart-buffer "^4.2.0"
 
 sonic-boom@^2.2.1:
   version "2.6.0"
