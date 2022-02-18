@@ -1143,7 +1143,7 @@ debug@2.6.9, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@4, debug@4.3.3, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2:
+debug@4, debug@4.3.3, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.3:
   version "4.3.3"
   resolved "https://registry.npmjs.org/debug/-/debug-4.3.3.tgz#04266e0b70a98d4462e6e288e38259213332b664"
   integrity sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==
@@ -1618,23 +1618,23 @@ expand-template@^2.0.3:
   resolved "https://registry.npmjs.org/expand-template/-/expand-template-2.0.3.tgz#6e14b3fcee0f3a6340ecb57d2e8918692052a47c"
   integrity sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==
 
-express-openid-connect@^2.5.1:
-  version "2.5.2"
-  resolved "https://registry.npmjs.org/express-openid-connect/-/express-openid-connect-2.5.2.tgz#5c576470084fb6777c0be8faecaa56771b27b782"
-  integrity sha512-YC1TwL+WE9Suafn5u+nDHOJf+k8qMNpvtHZrUX+6LCYH3G4l3WYu4NlRXjTu+Gx3bzV68Z89UhA4LDRyrns1EA==
+express-openid-connect@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/express-openid-connect/-/express-openid-connect-2.7.0.tgz#b89283164bb25edb0928606d7b28f89831d6d5e2"
+  integrity sha512-bVf2EeuJD6J3dGS4ApKDDg+MTFrwdO2oMceY20fK1xRNqKl3lPCKKWndNA2f5GnpSFpqdnFI2sjW/bUbtHRG+A==
   dependencies:
     base64url "^3.0.1"
     cb "^0.1.0"
     clone "^2.1.2"
     cookie "^0.4.1"
-    debug "^4.3.2"
-    futoin-hkdf "^1.4.2"
-    http-errors "^1.8.0"
-    joi "^17.4.2"
+    debug "^4.3.3"
+    futoin-hkdf "^1.5.0"
+    http-errors "^1.8.1"
+    joi "^17.5.0"
     jose "^2.0.5"
     on-headers "^1.0.2"
     openid-client "^4.9.1"
-    p-memoize "^4.0.2"
+    p-memoize "^4.0.4"
     url-join "^4.0.1"
 
 express@^4.17.1:
@@ -1869,9 +1869,9 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.npmjs.org/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-futoin-hkdf@^1.4.2:
+futoin-hkdf@^1.5.0:
   version "1.5.0"
-  resolved "https://registry.npmjs.org/futoin-hkdf/-/futoin-hkdf-1.5.0.tgz#f10cc4d32f1e26568ded58d5a6535a97aa3a064c"
+  resolved "https://registry.yarnpkg.com/futoin-hkdf/-/futoin-hkdf-1.5.0.tgz#f10cc4d32f1e26568ded58d5a6535a97aa3a064c"
   integrity sha512-4CerDhtTgx4i5PKccQIpEp4T9wqmosPIP9Kep35SdCpYkQeriD3zddUVhrO1Fc4QvGhsAnd2rXyoOr5047mJEg==
 
 gauge@~2.7.3:
@@ -2106,7 +2106,7 @@ http-cache-semantics@^4.0.0:
   resolved "https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.1.0.tgz#49e91c5cbf36c9b94bcfcd71c23d5249ec74e390"
   integrity sha512-carPklcUh7ROWRK7Cv27RPtdhYhUsela/ue5/jKzjegVvXDqM2ILE9Q2BGn9JZJh1g87cp56su/FgQSzcWS8cQ==
 
-http-errors@1.8.1, http-errors@^1.8.0:
+http-errors@1.8.1, http-errors@^1.8.1:
   version "1.8.1"
   resolved "https://registry.npmjs.org/http-errors/-/http-errors-1.8.1.tgz#7c3f28577cbc8a207388455dbd62295ed07bd68c"
   integrity sha512-Kpk9Sm7NmI+RHhnj6OIWDI1d6fIoFAtFt9RLaTMRlg/8w49juAStsrBgp0Dp4OdxdVbRIeKhtCUvoi/RuAhO4g==
@@ -2567,10 +2567,10 @@ isexe@^2.0.0:
   resolved "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
-joi@^17.4.2:
-  version "17.5.0"
-  resolved "https://registry.npmjs.org/joi/-/joi-17.5.0.tgz#7e66d0004b5045d971cf416a55fb61d33ac6e011"
-  integrity sha512-R7hR50COp7StzLnDi4ywOXHrBrgNXuUUfJWIR5lPY5Bm/pOD3jZaTwpluUXVLRWcoWZxkrHBBJ5hLxgnlehbdw==
+joi@^17.5.0:
+  version "17.6.0"
+  resolved "https://registry.yarnpkg.com/joi/-/joi-17.6.0.tgz#0bb54f2f006c09a96e75ce687957bd04290054b2"
+  integrity sha512-OX5dG6DTbcr/kbMFj0KGYxuew69HPcAE3K/sZpEV2nP6e/j/C0HV+HNiBPCASxdx5T7DMoa0s8UeHWMnb6n2zw==
   dependencies:
     "@hapi/hoek" "^9.0.0"
     "@hapi/topo" "^5.0.0"
@@ -3298,9 +3298,9 @@ p-map@^4.0.0:
   dependencies:
     aggregate-error "^3.0.0"
 
-p-memoize@^4.0.2:
+p-memoize@^4.0.4:
   version "4.0.4"
-  resolved "https://registry.npmjs.org/p-memoize/-/p-memoize-4.0.4.tgz#90a4c4668866737fc5c8364c56b06f6ca44afb15"
+  resolved "https://registry.yarnpkg.com/p-memoize/-/p-memoize-4.0.4.tgz#90a4c4668866737fc5c8364c56b06f6ca44afb15"
   integrity sha512-ijdh0DP4Mk6J4FXlOM6vPPoCjPytcEseW8p/k5SDTSSfGV3E9bpt9Yzfifvzp6iohIieoLTkXRb32OWV0fB2Lw==
   dependencies:
     map-age-cleaner "^0.1.3"
