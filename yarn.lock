@@ -2210,10 +2210,10 @@ ignore@^5.1.4, ignore@^5.1.9, ignore@^5.2.0:
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
 
-imapflow@^1.0.74:
-  version "1.0.85"
-  resolved "https://registry.npmjs.org/imapflow/-/imapflow-1.0.85.tgz#da379e9b0a94053e9005b5d779efaa9c7e128e94"
-  integrity sha512-yIKpzkWs+TBn3qBRrcJ2GLB9rm/f+I0I6EBn9Rj+bkyAvPGgDwLup1IIMS37UiP8wwTZ+hpvabteL6YyFF6XjA==
+imapflow@^1.0.86:
+  version "1.0.86"
+  resolved "https://registry.yarnpkg.com/imapflow/-/imapflow-1.0.86.tgz#4d74b6327683032ca6cdccf32b76d7cc2cbeb098"
+  integrity sha512-OZkks4al5IlL2P2+HSzj0jKyN5iN+t/OWGJqqK22NYi+huyN0DmZz0gF/nKSmL1+XhlrAPiiKpo6BAGILLxqQA==
   dependencies:
     encoding-japanese "1.0.30"
     iconv-lite "0.6.3"
@@ -2222,7 +2222,7 @@ imapflow@^1.0.74:
     libqp "1.1.0"
     mailsplit "5.3.1"
     nodemailer "6.7.2"
-    pino "7.8.0"
+    pino "7.8.1"
     socks "2.6.2"
 
 import-cwd@3.0.0:
@@ -3472,10 +3472,10 @@ pino-std-serializers@^4.0.0:
   resolved "https://registry.npmjs.org/pino-std-serializers/-/pino-std-serializers-4.0.0.tgz#1791ccd2539c091ae49ce9993205e2cd5dbba1e2"
   integrity sha512-cK0pekc1Kjy5w9V2/n+8MkZwusa6EyyxfeQCB799CQRhRt/CqYKiWs5adeu8Shve2ZNffvfC/7J64A2PJo1W/Q==
 
-pino@7.8.0:
-  version "7.8.0"
-  resolved "https://registry.npmjs.org/pino/-/pino-7.8.0.tgz#cbd48121fba0e9e08acea440d27aa7baa91fd73c"
-  integrity sha512-Ynw2HRVapiyj+ZGfUcpms+SRgDKFIy0ztaFUf3X6IHh+vsysMvn+tpV/Ej3gyutPp4n9tgH6ZkkCAelSvP5zmQ==
+pino@7.8.1:
+  version "7.8.1"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-7.8.1.tgz#f8a7b590a6f2321e2f23b91515763530efbd61bb"
+  integrity sha512-G0AVnaJBBtbdOpZ3z0/QD3R57BWwjVo4K7e+c5mHKjNCYIY1FIKuNlWjVJfCVQ4Bq6iN/yAAh5OCeeTI7OXosA==
   dependencies:
     fast-redact "^3.0.0"
     on-exit-leak-free "^0.2.0"
