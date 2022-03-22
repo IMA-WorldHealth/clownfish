@@ -2210,10 +2210,10 @@ ignore@^5.1.4, ignore@^5.1.9, ignore@^5.2.0:
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
 
-imapflow@^1.0.74:
-  version "1.0.85"
-  resolved "https://registry.npmjs.org/imapflow/-/imapflow-1.0.85.tgz#da379e9b0a94053e9005b5d779efaa9c7e128e94"
-  integrity sha512-yIKpzkWs+TBn3qBRrcJ2GLB9rm/f+I0I6EBn9Rj+bkyAvPGgDwLup1IIMS37UiP8wwTZ+hpvabteL6YyFF6XjA==
+imapflow@^1.0.87:
+  version "1.0.87"
+  resolved "https://registry.yarnpkg.com/imapflow/-/imapflow-1.0.87.tgz#8f29dcfa1e5d919fc13d9b81e84fe4cb0e9e2f42"
+  integrity sha512-rt6NeplS5/HIMYdDb44JdjSEwZl+dkRAY03Qth1y5Z2wuWyghMW1UREi2zGx1IJGUy4H7yePUPJdVJPNGo7z6A==
   dependencies:
     encoding-japanese "1.0.30"
     iconv-lite "0.6.3"
@@ -2221,8 +2221,8 @@ imapflow@^1.0.74:
     libmime "5.0.0"
     libqp "1.1.0"
     mailsplit "5.3.1"
-    nodemailer "6.7.2"
-    pino "7.8.0"
+    nodemailer "6.7.3"
+    pino "7.9.1"
     socks "2.6.2"
 
 import-cwd@3.0.0:
@@ -3050,10 +3050,10 @@ node-fetch@^2.6.0, node-fetch@^2.6.7:
   dependencies:
     whatwg-url "^5.0.0"
 
-nodemailer@6.7.2, nodemailer@^6.6.0:
-  version "6.7.2"
-  resolved "https://registry.npmjs.org/nodemailer/-/nodemailer-6.7.2.tgz#44b2ad5f7ed71b7067f7a21c4fedabaec62b85e0"
-  integrity sha512-Dz7zVwlef4k5R71fdmxwR8Q39fiboGbu3xgswkzGwczUfjp873rVxt1O46+Fh0j1ORnAC6L9+heI8uUpO6DT7Q==
+nodemailer@6.7.3, nodemailer@^6.6.0:
+  version "6.7.3"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.7.3.tgz#b73f9a81b9c8fa8acb4ea14b608f5e725ea8e018"
+  integrity sha512-KUdDsspqx89sD4UUyUKzdlUOper3hRkDVkrKh/89G+d9WKsU5ox51NWS4tB1XR5dPUdR4SP0E3molyEfOvSa3g==
 
 nofilter@^3.1.0:
   version "3.1.0"
@@ -3472,10 +3472,10 @@ pino-std-serializers@^4.0.0:
   resolved "https://registry.npmjs.org/pino-std-serializers/-/pino-std-serializers-4.0.0.tgz#1791ccd2539c091ae49ce9993205e2cd5dbba1e2"
   integrity sha512-cK0pekc1Kjy5w9V2/n+8MkZwusa6EyyxfeQCB799CQRhRt/CqYKiWs5adeu8Shve2ZNffvfC/7J64A2PJo1W/Q==
 
-pino@7.8.0:
-  version "7.8.0"
-  resolved "https://registry.npmjs.org/pino/-/pino-7.8.0.tgz#cbd48121fba0e9e08acea440d27aa7baa91fd73c"
-  integrity sha512-Ynw2HRVapiyj+ZGfUcpms+SRgDKFIy0ztaFUf3X6IHh+vsysMvn+tpV/Ej3gyutPp4n9tgH6ZkkCAelSvP5zmQ==
+pino@7.9.1:
+  version "7.9.1"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-7.9.1.tgz#7e6f401cac6e80b4eaee908ab90a05e48455cec2"
+  integrity sha512-28+D7c5orCoScdcWtiPXrCA9tdVosBWrYQgVtPdYTyiuTt6u/+rbEtpJR+dtVG8k1flhv0H2f0XSkgGm+TdjqQ==
   dependencies:
     fast-redact "^3.0.0"
     on-exit-leak-free "^0.2.0"
