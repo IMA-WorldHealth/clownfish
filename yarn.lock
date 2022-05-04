@@ -2405,10 +2405,10 @@ ignore@^5.2.0:
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
 
-imapflow@^1.0.91:
-  version "1.0.91"
-  resolved "https://registry.yarnpkg.com/imapflow/-/imapflow-1.0.91.tgz#534130027fff6b46c9450756aa869faa04914869"
-  integrity sha512-whBCXUPCSAhx4UlvieQ6AXxWikAsXrynsK4NqTWz/p0L5y9bSME0QuHUQ26p8uXfLCtbMHS3V6ngfJyH75WReQ==
+imapflow@^1.0.95:
+  version "1.0.95"
+  resolved "https://registry.yarnpkg.com/imapflow/-/imapflow-1.0.95.tgz#5a153c944bb6f036b696beae10fbdf96d86e9d1c"
+  integrity sha512-4XTS+RR20nLduNo9iX7xiTj/1K0BaEr+R1GaQXEqVTl7dSpeNT6UASoFg5GC1WjYeLTFRPPz8MBaiG3cHdbfxQ==
   dependencies:
     encoding-japanese "2.0.0"
     iconv-lite "0.6.3"
